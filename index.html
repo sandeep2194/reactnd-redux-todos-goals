@@ -29,11 +29,6 @@
         //middleware(s)
 
         //create store
-        const store = Redux.createStore(Redux.combineReducers({
-            todos,
-            goals,
-            loading,
-        }), Redux.applyMiddleware(ReduxThunk.default,checker, logger))
         
     </script>
 
@@ -51,12 +46,6 @@
         
 
 
-        ReactDOM.render(
-            <ReactRedux.Provider store={store}>
-                <ConnectedApp/>
-                </ReactRedux.Provider>,
-            document.getElementById('app')
-        )
     </script>
 </body>
 </html>
